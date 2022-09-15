@@ -1,0 +1,21 @@
+footer {
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #fff;
+  .container {
+    padding: 0;
+    margin-bottom: 0;
+    p {
+        text-align: center;
+      span {
+        font-weight: bold;
+        cursor: pointer;
+        display: inline-block;
+        transition: transform 0.3s ease;
+        &:hover {
+          transform: scale(1.04);
+        }
+      }
+    }
+  }
+}

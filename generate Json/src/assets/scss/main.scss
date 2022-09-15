@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+@import "./header";
+@import "./btns";
+@import "./mixins";
+@import "./field";
+@import "./output";
+@import "./footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+
+body.darkmode {
+  background-color: #333;
+  header {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    .container {
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .container {
+    .fields {
+      .field-header {
+        h3 {
+          color: #fff;
+        }
+      }
+      .field-content {
+        li {
+          background-color: #555;
+          border-radius: 10px;
+          input,
+          select {
+            background-color: #333;
+            color: #fff;
+            &:hover,
+            &:focus {
+              outline-color: #fff;
+            }
+          }
+          &::before {
+            background-color: #0d6efd;
+          }
+          .delete {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .foot {
+      hr {
+        border-color: #999;
+      }
+      div {
+        label {
+          color: #fff;
+        }
+        input {
+          background-color: #333;
+          color: #fff;
+          &:hover,
+          &:focus {
+            outline: 2px solid #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+

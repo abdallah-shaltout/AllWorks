@@ -1,0 +1,61 @@
+$colors: (
+  "blue": #0d6efd,
+  "green": #198754,
+  "teal": #20c997,
+  "cyan": #0dcaf0,
+  "red": #dc3545,
+  "secondary": #6c757d,
+  "dark": #212529,
+  "light": #f8f9fa,
+);
+@each $name, $color in $colors {
+  .btn-#{$name} {
+    background-color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .text-#{$name} {
+    color: $color;
+  }
+}
+@import "./mixins";
+button {
+  display: block;
+  border: 0;
+  padding: 15px 25px;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-transform: capitalize;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.btns {
+  @include flex_between;
+}
+.add-field {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  transition: width 0.3s ease;
+  width: 65px;
+  &:hover {
+    width: 100%;
+    transform: translate(0);
+  }
+}
+
+.tab-btn {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  &.active,
+  &:hover {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,104 @@
+.fields {
+  .field-header {
+    display: grid;
+    grid-template-columns: 25% 20% 1fr;
+    gap: 12.5px;
+    margin-bottom: 20px;
+    h3 {
+      text-transform: capitalize;
+      font-weight: 400;
+      letter-spacing: 1px;
+      font-size: 1.3rem;
+    }
+  }
+  .field-content {
+    li {
+      width: 80%;
+      max-width: 1170px;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      gap: 10px;
+      margin-bottom: 10px;
+      input,
+      select {
+        padding: 5px 10px;
+        display: block;
+        border-radius: 4px;
+        border: 1px solid #888;
+        font-size: 1.1rem;
+        &:focus,
+        &:hover {
+          border-color: #333;
+          box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.1);
+          background-color: #fefefe;
+          outline: 2px solid #333;
+        }
+      }
+      select {
+        text-align: center;
+      }
+      button {
+        padding: 0;
+        color: #333;
+        box-shadow: none;
+        font-size: 1.25rem;
+        @include flex_center;
+        width: fit-content;
+        margin: 0;
+        margin-left: auto;
+        border-radius: 4px;
+        transition: 0.3s linear;
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+        &:hover {
+          transform: translate(0);
+          background-color: #333;
+          color: #fff;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -6px;
+        border-radius: 4px;
+        background-color: map-get($map: $colors, $key: "teal");
+        width: 6px;
+        height: 100%;
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fields {
+    .field-header {
+      grid-template-columns: 50% 50%;
+      gap: 0;
+      h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    .field-content {
+      li {
+        grid-template-columns: 50% 50%;
+        background-color: #fff;
+        padding: 15px;
+        width: 100%;
+        & .delete {
+          grid-column: span 2;
+          width: 100%;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

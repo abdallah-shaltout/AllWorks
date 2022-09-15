@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(218, 23%, 16%);
+    font-family: "Manrope", sans-serif;
+    color: #fff;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    margin-bottom: 30px;
+}
+.container {
+    background-color: hsl(217, 19%, 24%);
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 60px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+.container .header {
+    font-size: 20px;
+    font-weight: 200;
+    color: hsl(150, 100%, 66%);
+    letter-spacing: 2px;
+}
+.container .advice {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+.lower {
+    width: 100%;
+}
+.lower .icopc {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+.lower .icomb {
+    display: none;
+}
+button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: hsl(150, 100%, 66%);
+    cursor: pointer;
+    border: 0;
+    transition: box-shadow 0.3s ease;
+}
+button:hover {
+    box-shadow: 0 0 10px hsl(193, 38%, 86%);
+    border: 0;
+}
+button:focus {
+    border: 0;
+    outline: none;
+}
+button img {
+    transition: transform 0.3s ease;
+}
+
+footer {
+    background-color: #323a49;
+    padding: 10px 0;
+    height: 50px;
+}
+
+footer .copy-right {
+    color: #f7f7f7;
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer .copy-right :first-child {
+    color: red;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+footer .copy-right span {
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 1.105rem;
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+    .lower .icopc {
+        display: none;
+    }
+    .lower .icomb {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+    footer .copy-right,
+    footer .copy-right span {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/myfav.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HTML Meta Tags -->
+    <title>Generate Json Object</title>
+    <meta name="description" content="Generate Json Object Spcial for you" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://gen-json.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Generate Json Object" />
+    <meta
+      property="og:description"
+      content="Generate Json Object Spcial for you"
+    />
+    <meta property="og:image" content="/assets/perview.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="gen-json.netlify.app" />
+    <meta property="twitter:url" content="https://gen-json.netlify.app/" />
+    <meta name="twitter:title" content="Generate Json Object" />
+    <meta
+      name="twitter:description"
+      content="Generate Json Object Spcial for you"
+    />
+    <meta name="twitter:image" content="/assets/perview.png" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      let inps = document.querySelectorAll("input");
+      inps.forEach((inp) => inp.setAttribute("spellcheck", false));
+    </script>
+  </body>
+</html>
